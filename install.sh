@@ -269,7 +269,7 @@ sudo -H python3 setup.py install --plugins
 # ============================================================================
 echo "\e[48;5;172m Install jetracer \e[0m"
 cd $HOME
-git clone https://github.com/NVIDIA-AI-IOT/jetracer
+git clone https://github.com/tadjemoore/jetracer
 cd jetracer
 sudo -H python3 setup.py install
 
