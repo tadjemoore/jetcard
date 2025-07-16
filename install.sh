@@ -107,7 +107,7 @@ sudo -H pip3 install Cython numpy==1.19.5
 
 cd $HOME
 sudo wget -N $PYTORCH_WHEEL_URL -O $PYTORCH_WHEEL
-sudo -H pip3 install $PYTORCH_WHEEL
+sudo -H pip3 install $PYTORCH_WHEEL --force-reinstall
 
 
 # ============================================================================
@@ -122,7 +122,7 @@ sudo -H pip3 install pillow==$PILLOW_VERSION
 cd $HOME
 # Clone torchvision from the official PyTorch repository
 # Use the version that matches the PyTorch wheel
-git clone --branch $TORCHVISION_VERSION https://github.com/pytorch/vision torchvision
+git clone --branch $TORCHVISION_VERSION https://github.com/pytorch/vision torchvision --depth 1
 cd torchvision
 python3 setup.py install --user
 cd  ../
