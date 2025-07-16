@@ -107,7 +107,7 @@ sudo -H pip3 install Cython numpy==1.19.5
 
 cd $HOME
 sudo wget -N $PYTORCH_WHEEL_URL -O $PYTORCH_WHEEL
-sudo -H pip3 install $PYTORCH_WHEEL --force-reinstall
+sudo -H pip3 install $PYTORCH_WHEEL
 
 
 # ============================================================================
