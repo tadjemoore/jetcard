@@ -122,7 +122,7 @@ sudo -H pip3 install pillow==$PILLOW_VERSION
 cd $HOME
 # Clone torchvision from the official PyTorch repository
 # Use the version that matches the PyTorch wheel
-git clone --branch $TORCHVISION_VERSION https://github.com/pytorch/vision torchvision --depth 1
+git clone --branch $TORCHVISION_VERSION https://github.com/pytorch/vision torchvision
 cd torchvision
 python3 setup.py install --user
 cd  ../
