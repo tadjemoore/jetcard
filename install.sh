@@ -106,7 +106,13 @@ sudo apt-get install -y python3-pip libopenblas-base libopenmpi-dev
 sudo -H pip3 install Cython numpy==1.19.5
 
 cd $HOME
-sudo wget -N $PYTORCH_WHEEL_URL -O $PYTORCH_WHEEL
+# Check if the PyTorch wheel exists 
+if [ -f $PYTORCH_WHEEL ]; then
+    echo "PyTorch wheel already exists: $PYTORCH_WHEEL"
+else
+    echo "Downloading PyTorch wheel from $PYTORCH_WHEEL_URL"
+    sudo wget -N $PYTORCH_WHEEL_URL -O $PYTORCH_WHEEL
+fi
 sudo -H pip3 install $PYTORCH_WHEEL
 
 
