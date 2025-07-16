@@ -131,8 +131,8 @@ cd $HOME
 
 if [ -d "torchvision" ]; then
     echo "torchvision directory already exists"
-else
-    echo "Cloning torchvision repository"
+    sudo rm -rf torchvision
+    echo "Removing existing torchvision directory"
 fi
 git clone --branch $TORCHVISION_VERSION https://github.com/pytorch/vision torchvision --depth 1
 cd torchvision
